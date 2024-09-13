@@ -11,4 +11,4 @@ jobs:
           distribution: 'zulu'
           java-version: '21'
       - run: javac example/*.java
-      - run: java example/Scene.java
+      - run: java example.Scene
