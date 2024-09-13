@@ -1,5 +1,5 @@
 name: scene-actions
-run-name: ${{ github.actor }} scene runs                         
+run-name: scene runs                         
 on: [push]
 jobs:
   runs-scene-with-zulu-21: 
