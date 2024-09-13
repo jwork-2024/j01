@@ -2,7 +2,7 @@ name: scene-actions
 run-name: ${{ github.actor }} scene runs                         
 on: [push]
 jobs:
-  runs-helloworld-with-zulu-17: 
+  runs-scene-with-zulu-21: 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
