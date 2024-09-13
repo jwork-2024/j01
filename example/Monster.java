@@ -14,16 +14,16 @@ public class Monster extends Creature {
 
     @Override
     public void attack(Creature c, int ap) {
-        System.out.println("I attack " + c + " of " + ap + "points");
+        System.out.println(this.name + " attack " + c + " of " + ap + "points");
         c.receiveAttack(ap * magic);
     }
 
     public void rolleyes() {
-        System.out.println("I roll my eyes. ");
+        System.out.println(this.name + " roll my eyes. ");
     }
 
     public void bePissed() {
-        System.out.println("I'm so freakin pissed. ");
+        System.out.println(this.name + " is so freakin pissed. ");
     }
 
 }
