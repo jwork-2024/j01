@@ -9,23 +9,24 @@ public class Creature extends Being {
     String[] memory;
     int memoryOffset;
 
-    public Creature() {
+    public Creature(String name) {
+        super(name);
         memory = new String[7];
         memoryOffset = 0;
     }
 
     public void speakTo(Creature creature, String something) {
-        System.out.println("I tell " + creature + "'" + something + "'");
+        System.out.println(this.name + " told " + creature + "'" + something + "'");
         creature.listen(something);
     }
 
     public void listen(String something) {
-        System.out.println("I heard: " + something);
+        System.out.println(this.name + " heard: " + something);
         memory[memoryOffset % memory.length] = something;
     }
 
     public void attack(Creature creature, int ap) {
-        System.out.println("I attack " + creature + " of " + ap + "points");
+        System.out.println(this.name + " attacked " + creature + " of " + ap + "points");
         creature.receiveAttack(ap);
     }
 
@@ -33,7 +34,7 @@ public class Creature extends Being {
         if (!isDead()) {
             if (defense < ap) {
                 health -= ap;
-                System.out.println("I got " + ap + "points attack");
+                System.out.println(this.name + " got " + ap + "points attack");
             }
         }
     }
@@ -41,7 +42,7 @@ public class Creature extends Being {
     public boolean isDead() {
 
         if (health <= 0) {
-            System.out.println("I am dead");
+            System.out.println(this.name + " is dead");
             return true;
         }
 

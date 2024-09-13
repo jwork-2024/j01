@@ -9,9 +9,9 @@ public class Scene {
 
     public Scene() {
         spiderWeb = new SpiderWeb();
-        oldman = new Human();
-        snake = new Monster(200, 10, 20, 2);
-        scorpion = new Monster(500, 50, 50, 2);
+        oldman = new Human("老爷爷");
+        snake = new Monster("蛇精", 200, 10, 20, 2);
+        scorpion = new Monster("蝎子精", 500, 50, 50, 2);
     }
 
     public void play() {

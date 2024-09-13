@@ -4,7 +4,8 @@ public class Monster extends Creature {
 
     int magic;
 
-    Monster(int hp, int ap, int dp, int mp) {
+    Monster(String name, int hp, int ap, int dp, int mp) {
+        super(name);
         health = hp;
         attack = ap;
         defense = dp;
